@@ -1,3 +1,6 @@
 body {
-  background-color: var(--navy);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-navy);
 }
