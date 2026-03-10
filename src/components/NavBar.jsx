@@ -1,23 +1,25 @@
 import Logo from './Logo'
 import SideBar from './SideBar'
-// import { HashLink } from 'react-router-hash-link'
+
 function NavBar() {
   return (
-    <div>
-      <div>
+    <div className="flex flex-row justify-evenly items-center p-4 gap-10">
+      <div className="flex flex-row justify-around items-center gap-8">
         <Logo />
-        {/* <HashLink smooth to="/#home">
-          Home
-        </HashLink>
-        <HashLink smooth to="/#about">
-          About
-        </HashLink>
-        <HashLink smooth to="/#projects">
-          Experience
-        </HashLink>
-        <HashLink smooth to="/#contact">
-          Projects
-        </HashLink> */}
+        <div className="flex flex-row text-light-slate text-md font-bold gap-4">
+          <a href="#home" className="hover:text-green">
+            Home
+          </a>
+          <a href="#about" className="hover:text-green">
+            About
+          </a>
+          <a href="#experience" className="hover:text-green">
+            Experience
+          </a>
+          <a href="#projects" className="hover:text-green">
+            Projects
+          </a>
+        </div>
       </div>
       <div>
         <div>

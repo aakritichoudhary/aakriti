@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 function SideBar() {
   return (
-    <div className="flex flex-row gap-2 items-center">
+    <div className="flex flex-row gap-4 items-center">
       <a to="mailto:aakriti1805@gmail.com" target="_blank">
         <MdEmail
           size={18}
