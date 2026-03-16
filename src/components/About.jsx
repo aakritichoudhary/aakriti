@@ -2,7 +2,7 @@ import SectionHeader from './SectionHeader'
 
 function About() {
   return (
-    <div>
+    <div id="about">
       <SectionHeader title="about me" />
     </div>
   )

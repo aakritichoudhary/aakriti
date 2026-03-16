@@ -1,6 +1,6 @@
 import { FaRegFolder } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkSquareAlt } from 'react-icons/fa'
 
 function ProjectCard({ title, description, techStack, projectUrl, githubUrl }) {
   return (
@@ -11,11 +11,11 @@ function ProjectCard({ title, description, techStack, projectUrl, githubUrl }) {
           <FaGithub />
         </a>
         <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-          <FaExternalLinkAlt />
+          <FaExternalLinkSquareAlt />
         </a>
       </div>
-      <div className="flex gap-3 flex-col text-white">
-        <h3 className=" text-lg text-bold">Library Management System</h3>
+      <div className="flex gap-3 flex-col text-light-slate">
+        <h3 className=" text-lg text-bold text-white">Library Management System</h3>
         <p className='text-sm'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi.
           Nam tenetur officia consequatur maxime dolores, fugiat adipisci
