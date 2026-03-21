@@ -8,7 +8,7 @@ function SideBar() {
       <a to="mailto:aakriti1805@gmail.com" target="_blank">
         <MdEmail
           size={18}
-          className="text-light-slate hover:text-green cursor-pointer"
+          className="text-lightest-slate hover:text-green cursor-pointer"
         />
       </a>
       <a
@@ -18,7 +18,7 @@ function SideBar() {
       >
         <FaLinkedin
           size={18}
-          className="text-light-slate  hover:text-green cursor-pointer"
+          className="text-lightest-slate  hover:text-green cursor-pointer"
         />
       </a>
       <a
@@ -28,7 +28,7 @@ function SideBar() {
       >
         <FaGithub
           size={18}
-          className="text-light-slate  hover:text-green cursor-pointer"
+          className="text-lightest-slate  hover:text-green cursor-pointer"
         />
       </a>
       <a
@@ -38,7 +38,7 @@ function SideBar() {
       >
         <SiLeetcode
           size={18}
-          className="text-light-slate  hover:text-green cursor-pointer"
+          className="text-lightest-slate  hover:text-green cursor-pointer"
         />
       </a>
     </div>

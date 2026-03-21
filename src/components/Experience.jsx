@@ -1,80 +1,87 @@
 import SectionHeader from './SectionHeader'
+import { useState } from 'react'
+import ListItem from './ListItem'
 
 function Experience() {
-  const experienceItems = {
-    TexasInstruments: {
-      jobTitle: 'Software Engineer @',
-      duration: 'July 2024 - Present',
-      desc:[
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.",
-      ]
+  const experienceItems = [
+    {
+      id: 0,
+      title: 'Texas Instruments',
+      subTitle: 'Software Engineer',
+      duration: 'Jul 2024 - Present',
+      description: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et facere, rerum eum quod laborum distinctio quae, nam doloribus veniam itaque quos ipsam ad odit maiores fugit inventore facilis quidem.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et facere, rerum eum quod laborum distinctio quae, nam doloribus veniam itaque quos ipsam ad odit maiores fugit inventore facilis quidem.',
+      ],
     },
-    Ninjacart: {
-      jobTitle: 'Software Engineer Intern @',
-      duration: 'Jan 2024 - March 2024',
-      desc:[
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.",
-      ]
-    }
-  }
+    {
+      id: 1,
+      title: 'Ninajacart',
+      subTitle: 'Software Engineer Intern',
+      duration: 'Jan 2024 - Mar 2024',
+      description: [
+        'Built a content moderation dashboard with a Nest.js backend, React,js frontend, integrating Mastodon APIs for decentralized content review',
+        'Implemented role-based access and moderation pipelines to support community-driven governance.',
+      ],
+    },
+    {
+      id: 2,
+      title: 'Team Green Darbhanga',
+      subTitle: 'Co-founder',
+      duration: 'Sep 2020 - Sep 2023',
+      description: [
+        'Officia facilis, quos quasi voluptatem molestias dicta eveniet hic pariatur voluptas sequi error iste recusandae deleniti consectetur tempore perferendis delectus autem nostrum ullam facere nisi totam. Consequuntur saepe voluptatibus culpa.',
+        'Officia facilis, quos quasi voluptatem molestias dicta eveniet hic pariatur voluptas sequi error iste recusandae deleniti consectetur tempore perferendis delectus autem nostrum ullam facere nisi totam. Consequuntur saepe voluptatibus culpa.',
+      ],
+    },
+  ]
+  const [activeTab, setActiveTab] = useState(0)
   return (
-    <div id="experience" className='h-screen'>
+    <div id="experience" className="h-screen">
       <SectionHeader title="experience" />
-      <TabButtons experienceItems={Object.values(experienceItems)} activeTab={0} setActiveTab={() => {}} />
-        <TabContent experienceItems={Object.values(experienceItems)} activeTab={0} />
-      <div>
-        {Object.keys(experienceItems).map((key) => {
-          const item = experienceItems[key]
-          return (
-            <div key={key} className="mb-6 text-light-slate">
-              <h3 className="text-xl font-bold ">{item.jobTitle}</h3>
-              <p>{item.duration}</p>
-              <ul className="list-disc list-inside mt-2">
-                {item.desc.map((point, index) => (
-                  <li key={index} >
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
+      <div className="flex">
+        <TabHeader
+          items={experienceItems}
+          setActiveTab={setActiveTab}
+          activeTab={activeTab}
+        />
+        <TabContent items={experienceItems} activeTab={activeTab} />
+      </div>
+    </div>
+  )
+}
+export default Experience
+
+function TabHeader({ items, activeTab, setActiveTab }) {
+  return (
+    <div className="flex flex-col gap-6 justify-evenly border-r border-light-navy mr-4 pr-6 text-xs">
+      {items.map((item) => (
+        <button
+          key={item.id}
+          className={`uppercase ${activeTab === item.id ? 'text-green ' : 'text-slate'} hover:cursor-pointer`}
+          onClick={() => setActiveTab(item.id)}
+        >
+          {item.title}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+function TabContent({ items, activeTab }) {
+  return (
+    <div className="flex gap-6 flex-col text-sm ml-6">
+      <div className="text-lightest-slate text-xl font-bold">
+        {/* Using the active index to select a particular data */}
+        {items[activeTab].subTitle} @{' '}
+        <span className="text-green">{items[activeTab].title}</span>
+      </div>
+      <div className="uppercase text-slate">{items[activeTab].duration}</div>
+      <div className="flex flex-col gap-3">
+        {items[activeTab].description.map((desc) => {
+          return <ListItem text={desc} />
         })}
       </div>
     </div>
   )
 }
-
-export default Experience
-function TabButtons({experienceItems, activeTab, setActiveTab}) {
-  return(
-    <div>{experienceItems.map((item, index) => (
-      <button
-        key={index}
-        className={`px-4 py-2 ${activeTab === index ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'}`}
-        onClick={() => setActiveTab(index)}
-      >
-        {item.jobTitle}
-      </button>
-    ))}</div>
-  )
-}
-
-function TabContent({experienceItems, activeTab}) {
-  const item = experienceItems[activeTab]
-  return(
-    <div>
-      <h3 className="text-xl font-bold">{item.jobTitle}</h3>
-      <p>{item.duration}</p>
-      <ul className="list-disc list-inside mt-2">
-        {item.desc.map((point, index) => (
-          <li key={index}>
-            {point}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-

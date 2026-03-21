@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <div className="text-lg font-bold text-light-slate">Aakriti Choudhary</div>
+    <div className="text-lg font-bold text-lightest-slate">Aakriti Choudhary</div>
   )
 }
 export default Logo

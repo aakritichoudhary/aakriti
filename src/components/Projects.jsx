@@ -5,7 +5,13 @@ function Projects() {
   return (
     <div id="projects">
       <SectionHeader title="projects" />
-      <ProjectCard />
+      <div className="flex flex-1 gap-10">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </div>
   )
 }
