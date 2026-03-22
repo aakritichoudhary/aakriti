@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="text-slate text-xs flex justify-center items-center my-7 flex-col">
+    <div className="text-slate text-xs flex justify-center items-center my-7 flex-col pt-10">
       <div>Built by Aakriti Choudhary.</div>
       <div>
         Design credits:{' '}

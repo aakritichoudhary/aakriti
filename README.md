@@ -1,6 +1,10 @@
 ```bash
 npm install tailwindcss @tailwindcss/vite
 npm install --save react-router-hash-link
+npm install -g ngrok
+ngrok config add-authtoken YOUR_TOKEN
+npm run dev
+ngrok http PORT
 ```
 # React + TypeScript + Vite
 

@@ -1,6 +1,7 @@
 import { FaRegFolder } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaExternalLinkSquareAlt } from 'react-icons/fa'
+import ListItem from './ListItem'
 
 function ProjectCard({
   title,
@@ -26,13 +27,12 @@ function ProjectCard({
       </div>
       <div className="flex gap-3 flex-col text-lightest-slate">
         <h3 className=" text-lg text-bold text-white">
-          Library Management System
+          {title}
         </h3>
         <p className="text-sm">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi.
-          Nam tenetur officia consequatur maxime dolores.
+         {description}
         </p>
-        <div className="text-sm mt-8">Java, JDBC, NetBeans</div>
+        <div className="text-sm mt-8">{techStack.map((tech) => <ListItem text={tech}/>)}</div>
       </div>
     </div>
   )

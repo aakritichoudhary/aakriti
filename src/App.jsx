@@ -7,14 +7,12 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 function App() {
   return (
-    <div>
+    <div className="w-full">
       <NavBar />
-      <div className="pt-20">
-        <Home />
-        <About />
-        <Experience />
-        <Projects />
-      </div>
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
       <Footer />
     </div>
   )

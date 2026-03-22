@@ -1,6 +1,21 @@
-body {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   background-color: var(--color-navy);
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
 }

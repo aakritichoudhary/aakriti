@@ -37,7 +37,7 @@ function Experience() {
   ]
   const [activeTab, setActiveTab] = useState(0)
   return (
-    <div id="experience" className="h-screen">
+    <div id="experience" className="min-h-screen w-full px-8 scroll-mt-20">
       <SectionHeader title="experience" />
       <div className="flex">
         <TabHeader

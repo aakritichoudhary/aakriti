@@ -1,13 +1,12 @@
 import { MdEmail } from 'react-icons/md'
 import Typewriter from 'typewriter-effect'
-
+import memeImg from '../assets/meme.jfif'
 function Home() {
   return (
-    <div id="home" className="flex gap-8 scroll-mt-20">
+    <div id="home" className="flex flex-col gap-30 min-h-screen w-full items-center justify-center md:px-8 md:flex-row scroll-mt-20">
       {/* tudu: add cool animation here */}
-      <div className="text-2xl">Some cool animation</div>
-      <div>
-        <div>
+      <div className="text-2xl max-w-md"><img src={memeImg} className="w-full h-auto"/></div>
+      <div className='flex flex-col items-center md:items-start text-center md:text-left max-w-md gap-8'>
           <Typewriter
             onInit={(typewriter) => {
               typewriter
@@ -20,15 +19,14 @@ function Home() {
               cursorClassName: 'text-green text-5xl animate-blink',
             }}
           />
-        </div>
-        <div className="text-slate text-sm my-3 mb-3">
+        <div className="text-slate text-sm">
           I'm a software engineer and an artist based in India. I work on AI
           platforms and full-stack systems, focusing on tools that make complex
           technology easier to use.
         </div>
         <a
           href="mailto:aakriti1805@gmail.com"
-          className="flex flex-row text-green items-center gap-2 justify-center border-solid border-2 rounded-md max-w-25 p-1 py-2 hover:bg-lightest-navy"
+          className="flex flex-row text-green items-center gap-2 justify-center border-solid border-2 rounded-md max-w-30 px-4 p-2 hover:bg-lightest-navy"
         >
           <span>
             <MdEmail />
