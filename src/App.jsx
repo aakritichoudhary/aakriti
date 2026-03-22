@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="px-80 pt-20 scroll-pt-20">
+      <div className="pt-20">
         <Home />
         <About />
         <Experience />
