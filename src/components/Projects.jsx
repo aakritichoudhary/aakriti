@@ -8,7 +8,7 @@ function Projects() {
       title: 'Library Management System',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: false,
@@ -18,7 +18,7 @@ function Projects() {
       title: 'Habit Tracker',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: true,
@@ -28,7 +28,7 @@ function Projects() {
       title: 'Sorting Visualizer',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: true,
@@ -38,7 +38,7 @@ function Projects() {
       title: 'Outfir Generator',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: true,
@@ -48,7 +48,7 @@ function Projects() {
       title: 'Portfolio',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: true,
@@ -58,7 +58,7 @@ function Projects() {
       title: 'Notification System',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: true,
@@ -68,17 +68,17 @@ function Projects() {
       title: 'Blah blah',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quasi. Nam tenetur officia consequatur maxime dolores.',
-      techstack: ['Java', 'NetBeans', 'JDBC'],
+      techStack: ['Java', 'NetBeans', 'JDBC'],
       githubUrl: 'abc.github.com',
       projectUrl: 'xyz.project.com',
       hasProjectUrl: false,
     }
   ]
   return (
-    <div id="projects" className='min-h-90vh px-8 w-full scroll-mt-20'>
+    <div id="projects" className='min-h-90 px-8 w-full scroll-mt-20 flex flex-col justify-center max-w-1000px'>
       <SectionHeader title="projects" />
-      <div className="flex flex-1 gap-10">
-        {projects.map((project) => <ProjectCard title={project.title} description={project.description} techStack={project.techstack} githubUrl={project.githubUrl} projectUrl={project.projectUrl} hasProjectUrl={project.hasProjectUrl}/>)}
+      <div className="grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] w-full">
+        {projects.map(project => <ProjectCard key={project.id} {...project} />)}
       </div>
     </div>
   )

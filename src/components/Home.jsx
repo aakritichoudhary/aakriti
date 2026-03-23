@@ -3,9 +3,9 @@ import Typewriter from 'typewriter-effect'
 import memeImg from '../assets/meme.jfif'
 function Home() {
   return (
-    <div id="home" className="flex flex-col gap-30 min-h-screen w-full items-center justify-center md:px-8 md:flex-row scroll-mt-20">
+    <div id="home" className="flex flex-col gap-[120px] min-h-screen w-full items-center justify-center md:px-8 md:flex-row scroll-mt-20">
       {/* tudu: add cool animation here */}
-      <div className="text-2xl max-w-md"><img src={memeImg} className="w-full h-auto"/></div>
+      <div className="max-w-md flex-shrink-0"><img src={memeImg} className="w-full h-auto min-w-[250px]"/></div>
       <div className='flex flex-col items-center md:items-start text-center md:text-left max-w-md gap-8'>
           <Typewriter
             onInit={(typewriter) => {

@@ -37,9 +37,9 @@ function Experience() {
   ]
   const [activeTab, setActiveTab] = useState(0)
   return (
-    <div id="experience" className="min-h-screen w-full px-8 scroll-mt-20">
+    <div id="experience" className="min-h-[90vh] w-full px-8 scroll-mt-20">
       <SectionHeader title="experience" />
-      <div className="flex">
+      <div className="flex md:flex-row flex-col">
         <TabHeader
           items={experienceItems}
           setActiveTab={setActiveTab}
@@ -54,7 +54,7 @@ export default Experience
 
 function TabHeader({ items, activeTab, setActiveTab }) {
   return (
-    <div className="flex flex-col gap-6 justify-evenly border-r border-light-navy mr-4 pr-6 text-xs">
+    <div className="flex md:flex-col gap-6 justify-evenly md:border-r border-light-navy mr-4 md:pr-6 text-xs pb-6 border-b">
       {items.map((item) => (
         <button
           key={item.id}
@@ -70,7 +70,7 @@ function TabHeader({ items, activeTab, setActiveTab }) {
 
 function TabContent({ items, activeTab }) {
   return (
-    <div className="flex gap-6 flex-col text-sm ml-6">
+    <div className="flex gap-6 flex-col text-sm md:ml-6 mt-6 text-justify">
       <div className="text-lightest-slate text-xl font-bold">
         {/* Using the active index to select a particular data */}
         {items[activeTab].subTitle} @{' '}
