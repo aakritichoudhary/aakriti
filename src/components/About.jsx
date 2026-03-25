@@ -4,7 +4,7 @@ import ListItem from "./ListItem";
 
 function About() {
   return (
-    <div id="about" className="min-h-[90vh] w-full px-6 md:px-8 scroll-mt-20">
+    <div id="about" className="min-h-screen w-full px-6 md:px-8 scroll-mt-20">
       <SectionHeader title="about me" />
 
       <div className="flex flex-col md:flex-row items-start gap-10 md:gap-[80px]">

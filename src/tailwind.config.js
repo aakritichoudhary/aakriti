@@ -10,21 +10,6 @@ module.exports = {
       animation: {
         float: "float 4s ease-in-out infinite",
       },
-      fontFamily: {
-        sans: [
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Oxygen",
-          "Ubuntu",
-          "Cantarell",
-          "Fira Sans",
-          "Droid Sans",
-          "Helvetica Neue",
-          "sans-serif",
-        ],
-      },
     },
   },
 };

@@ -17,6 +17,7 @@ function Home() {
             }}
             options={{
               cursorClassName: 'text-green text-5xl animate-blink',
+              wrapperClassName: 'font-code'
             }}
           />
         <div className="text-slate text-sm">
