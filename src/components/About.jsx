@@ -1,21 +1,17 @@
-import SectionHeader from './SectionHeader'
-import aakritiImg from '../assets/aakriti.jpg'
-import ListItem from './ListItem'
+import SectionHeader from "./SectionHeader";
+import aakritiImg from "../assets/aakriti.jpg";
+import ListItem from "./ListItem";
 
 function About() {
   return (
-    <div
-      id="about"
-      className="min-h-[90vh] w-full px-6 md:px-8 scroll-mt-20"
-    >
+    <div id="about" className="min-h-[90vh] w-full px-6 md:px-8 scroll-mt-20">
       <SectionHeader title="about me" />
 
       <div className="flex flex-col md:flex-row items-start gap-10 md:gap-[80px]">
-        
         {/* Text */}
         <div className="w-full md:w-1/3 lg:w-2/3 flex flex-col gap-4 text-slate leading-7 text-justify order-2 md:order-1">
           <div>
-            I am currently a <b>Software Engineer</b> at{' '}
+            I am currently a <b>Software Engineer</b> at{" "}
             <a
               href="https://www.ti.com/"
               target="_blank"
@@ -26,7 +22,7 @@ function About() {
             </a>
             , where I build scalable <b>full-stack platforms</b> powering
             enterprise applications, with a focus on <b>AI-driven systems</b>.
-            Previously, I worked at{' '}
+            Previously, I worked at{" "}
             <a
               href="https://ninjacart.com/"
               target="_blank"
@@ -35,10 +31,11 @@ function About() {
             >
               Ninjacart
             </a>
-            , developing a{' '}
+            , developing a{" "}
             <b>
               full-stack content moderation platform with role-based workflows
-            </b>.
+            </b>
+            .
           </div>
 
           <div>Here are some technologies I have been working with:</div>
@@ -68,16 +65,15 @@ function About() {
           <img
             src={aakritiImg}
             alt="Aakriti"
-            className="rounded-xl w-full h-auto shadow-lg transition duration-500 hover:scale-105"
+            className="shadow-xl/30 rounded-xl w-full h-auto shadow-lg transition duration-500 hover:scale-105"
           />
         </div>
 
         {/* Spacer for centering image on md */}
         <div className="hidden md:block md:w-1/3 lg:hidden order-3"></div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
