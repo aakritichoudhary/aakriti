@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/vue"
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <div className="w-full">
